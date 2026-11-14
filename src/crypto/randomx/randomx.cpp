@@ -123,7 +123,7 @@ RandomX_ConfigurationYada::RandomX_ConfigurationYada()
 RandomX_ConfigurationBase::RandomX_ConfigurationBase()
 	: ArgonIterations(3)
 	, ArgonLanes(1)
-	, ArgonSalt("RandomX\x03")
+	, ArgonSalt("RandomCVN\x01") // CVN edition; published RandomX uses "RandomX\x03"
 	, SuperscalarLatency(170)
 	, ScratchpadL1_Size(16384)
 	, ScratchpadL2_Size(262144)

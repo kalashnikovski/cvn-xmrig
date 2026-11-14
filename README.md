@@ -1,3 +1,48 @@
+# XMRig, CVN edition
+
+This is [XMRig](https://github.com/xmrig/xmrig) with the RandomX settings of
+[Covenant Standard (CVN)](https://github.com/kalashnikovski/cvn_node). It exists
+so that everyone mining CVN can use the fastest miner available, not only
+people able to modify one themselves.
+
+**It mines CVN only.** The algorithm name `rx/0` in this edition means CVN's
+RandomX, so it cannot mine Monero or any other RandomX coin; use the original
+XMRig for those.
+
+## What is different from XMRig
+
+| | XMRig | This edition |
+|---|---|---|
+| RandomX salt | `RandomX\x03` | `RandomCVN\x01` |
+| RandomX extra dataset size | 33,554,368 bytes | 33,684,032 bytes |
+| Built-in donation | 1% minimum, to XMRig's developers | none (it would mine another coin) |
+| Name shown | XMRig | XMRig-CVN |
+
+Nothing else is changed. The licence is unchanged (GPL version 3, see
+`LICENSE`), and this source is published as that licence requires. All credit
+for the miner belongs to the XMRig developers; please consider supporting
+them directly.
+
+## Mining CVN with it
+
+1. Run a CVN node on the same machine (see the CVN repository). On a RandomX
+   network it offers mining work on its work-server port.
+2. Start this miner pointed at the node, with your CVN address as the user:
+
+       xmrig -o 127.0.0.1:PORT -u YOUR_CVN_ADDRESS -a rx/0
+
+   `start_cvn.cmd` (Windows) and `start_cvn.sh` (Linux) do this; edit the
+   address and port in them first.
+3. The node pauses its own built-in miner while this one is connected, checks
+   every block this miner finds, and pays the reward to the address you gave.
+
+To mine with several machines through one node, start the node with
+`--mining-listen 0.0.0.0` and point each miner at that machine's address.
+
+Everything below is the original XMRig README.
+
+---
+
 # XMRig
 
 [![Github All Releases](https://img.shields.io/github/downloads/xmrig/xmrig/total.svg)](https://github.com/xmrig/xmrig/releases)

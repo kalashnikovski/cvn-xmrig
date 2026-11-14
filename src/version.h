@@ -9,8 +9,8 @@
 #define XMRIG_VERSION_H
 
 #define APP_ID        "xmrig"
-#define APP_NAME      "XMRig"
-#define APP_DESC      "XMRig miner"
+#define APP_NAME      "XMRig-CVN"
+#define APP_DESC      "XMRig miner, CVN edition"
 #define APP_VERSION   "6.26.0"
 #define APP_DOMAIN    "xmrig.com"
 #define APP_SITE      "www.xmrig.com"
