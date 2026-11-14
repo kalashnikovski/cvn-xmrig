@@ -71,7 +71,7 @@ struct RandomX_ConfigurationBase
 		CacheAccesses = 8,
 		SuperscalarMaxLatency = 170,
 		DatasetBaseSize = 2147483648,
-		DatasetExtraSize = 33554368 + 64 * 2026, // CVN edition; published RandomX uses 33554368
+		DatasetExtraSize = 33554368 - 64 * 2026, // CVN edition; published RandomX uses 33554368. Must not exceed it: memory is reserved for the standard size.
 		JumpBits = 8,
 		JumpOffset = 8,
 		CacheLineAlignMask_Calculated = (DatasetBaseSize - 1) & ~(RANDOMX_DATASET_ITEM_SIZE - 1),

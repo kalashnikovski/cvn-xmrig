@@ -14,7 +14,7 @@ XMRig for those.
 | | XMRig | This edition |
 |---|---|---|
 | RandomX salt | `RandomX\x03` | `RandomCVN\x01` |
-| RandomX extra dataset size | 33,554,368 bytes | 33,684,032 bytes |
+| RandomX extra dataset size | 33,554,368 bytes | 33,424,704 bytes |
 | Built-in donation | 1% minimum, to XMRig's developers | none (it would mine another coin) |
 | Name shown | XMRig | XMRig-CVN |
 
